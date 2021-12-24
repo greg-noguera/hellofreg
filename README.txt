@@ -1,3 +1,9 @@
+A WordPress theme I developed for freg.online website.
+
+This theme has compatibility with Bootstrap 5.1, Font Awesome, and Jetpack plugin.
+
+Una forma inusual de editar cosas.
+
 You can customize the shortcodes present in the footer and blog sections following this instructions.
 
 You can add custom content by adding the following code in the functions.php file or creating a new plugin whit the same code. It is recommended that you add this code into your child theme's functions.php file.
