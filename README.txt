@@ -1,38 +1,30 @@
 A WordPress theme I developed for freg.online website.
 
-This theme has compatibility with Bootstrap 5.1, Font Awesome, and Jetpack plugin.
+This theme has compatibility with Bootstrap 5.1, Font Awesome, Elementor 3.7 and Jetpack plugin.
 
-Una forma inusual de editar cosas.
+You can customize the shortcodes in the footer and blog sections following this instructions:
 
-You can customize the shortcodes present in the footer and blog sections following this instructions.
+You can add custom content by adding the following code in the functions.php file or creating a new plugin. It is recommended that you add this code into your child theme's functions.php file. 
 
-You can add custom content by adding the following code in the functions.php file or creating a new plugin whit the same code. It is recommended that you add this code into your child theme's functions.php file.
+	// I know it's a very lazy way to add content, I'm so sorry.
 
--- STAR OF CODE - copy what comes next -- 
+	//This shortcode print the social media icons in the footer section
+	function lazy_footer_icons() {
+	    return 	
+		'<ul class="social-icons">
+		<li><a class="instagram-icon" href=" INSERT YOUR CUSTOM LINK HERE  "><i class="fa fa-instagram"></i></a></li>
+		<li><a class="linkedin-icon" href="  INSERT YOUR CUSTOM LINK HERE  "><i class="fa fa-linkedin"></i></a></li>  
+		</ul>';
+	}
 
-// I know it's a very lazy way to add content, I'm so sorry.
+	add_shortcode('footer_icons', 'lazy_footer_icons');
 
-//This shortcode print the social media icons in the footer section
-function lazy_footer_icons() {
-    return 	
-	'<ul class="social-icons">
-	<li><a class="instagram-icon" href=" INSERT YOUR CUSTOM LINK HERE  "><i class="fa fa-instagram"></i></a></li>
-	<li><a class="linkedin-icon" href="  INSERT YOUR CUSTOM LINK HERE  "><i class="fa fa-linkedin"></i></a></li>  
-	</ul>';
-}
+	//This shortcode print a paragraph in the hero blog section
+	function lazy_blog_p_hero() {
+	    return 	
+		'<p class="p-hero-blog"> INSERT YOUR CUSTOM TEXT HERE </p>';
+	}
 
-add_shortcode('footer_icons', 'lazy_footer_icons');
+	add_shortcode('blog-p-hero', 'lazy_blog_p_hero');
 
-//This shortcode print a paragraph in the hero blog section
-function lazy_blog_p_hero() {
-    return 	
-	'<p class="p-hero-blog"> INSERT YOUR CUSTOM TEXT HERE </p>';
-}
-
-add_shortcode('blog-p-hero', 'lazy_blog_p_hero');
-
--- END OF CODE--
-
-This feature has been lazily added because it was not necessary for the original project and is shared as an additional feature.
-
-If you need a custom theme or plugin go to www.freg.online
+If you need a custom theme or plugin for WordPress, please go to my site www.freg.online
